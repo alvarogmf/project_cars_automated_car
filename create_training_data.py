@@ -5,7 +5,6 @@ import time
 from getkeys import key_check
 import os
 
-
 def keys_to_output(keys):
     '''
     Convert keys to a ...multi-hot... array
