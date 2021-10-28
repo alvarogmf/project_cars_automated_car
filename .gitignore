@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#numpy arrays
+*.npy
+
+#png images
+*.png
