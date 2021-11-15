@@ -1,5 +1,5 @@
 import numpy as np
-from grabscreen import grab_screen
+from grab_screen import grab_screen
 import cv2
 import time
 from getkeys import key_check

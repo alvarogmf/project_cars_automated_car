@@ -1,11 +1,11 @@
 import numpy as np
 from alexnet import alexnet
-
+import tensorflow.keras.backend as K
 from tensorflow.config.experimental import list_physical_devices, set_memory_growth
+
 physical_devices = list_physical_devices('GPU')
 set_memory_growth(physical_devices[0], True)
 
-import tensorflow.keras.backend as K
 K.clear_session()
 
 WIDTH = 160
