@@ -1,0 +1,1 @@
+In this folder, numpy arrays will be stored. These arrays are the training data for the model.
