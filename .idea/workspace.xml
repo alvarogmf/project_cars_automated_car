@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39626cfc-6e64-4ed2-9f4f-004110dec49e" name="Default Changelist" comment="Towards training the model v2" />
+    <list default="true" id="39626cfc-6e64-4ed2-9f4f-004110dec49e" name="Default Changelist" comment="Towards training the model v2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automated_car_playground.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_training_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_training_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getkeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/getkeys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_model.ipynb" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
