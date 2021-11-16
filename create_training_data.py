@@ -4,6 +4,7 @@ import cv2
 import time
 from getkeys import key_check
 import os
+np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
 
 def keys_to_output(keys):
@@ -27,7 +28,7 @@ file_name = 'data/training_data.npy'
 
 if os.path.isfile(file_name):
     print('File exists, loading previous data!')
-    training_data = list(np.load(file_name))
+    training_data = list(np.load(file_name, allow_pickle=True))
 else:
     print('File does not exist, starting fresh!')
     training_data = []
@@ -61,7 +62,9 @@ def main():
             if paused:
                 paused = False
                 print('unpaused!')
-                time.sleep(1)
+                for i in list(range(4))[::-1]:
+                    print(i + 1)
+                    time.sleep(1)
             else:
                 print('Pausing!')
                 paused = True

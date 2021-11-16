@@ -11,19 +11,20 @@ K.clear_session()
 WIDTH = 160
 HEIGHT = 120
 LR = 1e-3
-EPOCHS = 10
-MODEL_NAME = 'pygta5-car-fast-{}-{}-{}-epochs-300K-data.model'.format(LR, 'alexnetv2',EPOCHS)
+EPOCHS = 2
+MODEL_NAME = 'model/pygta5-car-{}-{}-{}-epochs.model'.format(LR, 'alexnetv2',EPOCHS)
 
 model = alexnet(WIDTH, HEIGHT, LR)
 
 hm_data = 22
+
 for i in range(EPOCHS):
     for i in range(1,hm_data+1):
-        train_data = np.load('training_data-{}-balanced.npy'.format(i))
+        train_data = np.load('data/training_data_v4.npy'.format(i), allow_pickle=True)
 
-        train = train_data[:-100]
-        test = train_data[-100:]
-
+        train = train_data[:-2000]
+        test = train_data[-2000:]
+        
         X = np.array([i[0] for i in train]).reshape(-1,WIDTH,HEIGHT,1)
         Y = [i[1] for i in train]
 
@@ -34,6 +35,4 @@ for i in range(EPOCHS):
             snapshot_step=500, show_metric=True, run_id=MODEL_NAME)
 
         model.save(MODEL_NAME)
-
-
 
