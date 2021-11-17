@@ -20,7 +20,7 @@ hm_data = 22
 
 for i in range(EPOCHS):
     for i in range(1,hm_data+1):
-        train_data = np.load('data/training_data_v4.npy'.format(i), allow_pickle=True)
+        train_data = np.load('data/training_data_v3.npy'.format(i), allow_pickle=True)
 
         train = train_data[:-2000]
         test = train_data[-2000:]

@@ -36,4 +36,4 @@ rights = rights[:len(forwards)]
 final_data = forwards + lefts + rights
 shuffle(final_data)
 
-np.save('data/training_data_v2.npy', final_data)
+np.save('data/training_data_v3.npy', final_data)
