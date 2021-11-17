@@ -138,3 +138,6 @@ dmypy.json
 *.data-00000-of-00001
 *.index
 *.meta
+
+#log files
+*.DESKTOP-D364AI3

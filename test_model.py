@@ -4,7 +4,7 @@ from PIL import ImageGrab
 import cv2
 import time
 from direct_keys import PressKey, ReleaseKey, W, A, S, D
-from train_model import alexnet
+from alexnet import alexnet
 from getkeys import key_check
 print(1)
 WIDTH = 160
