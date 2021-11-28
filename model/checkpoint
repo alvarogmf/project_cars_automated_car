@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\Alvaro\\Python\\project_cars_automated_car\\model\\pygta5-car-0.001-alexnetv2-2-epochs.model"
-all_model_checkpoint_paths: "C:\\Users\\Alvaro\\Python\\project_cars_automated_car\\model\\pygta5-car-0.001-alexnetv2-2-epochs.model"
+model_checkpoint_path: "C:\\Users\\Alvaro\\Python\\project_cars_automated_car\\model\\pygta5-car-0.001-alexnetv2-10-epochs.model"
+all_model_checkpoint_paths: "C:\\Users\\Alvaro\\Python\\project_cars_automated_car\\model\\pygta5-car-0.001-alexnetv2-10-epochs.model"

@@ -13,14 +13,16 @@ def keys_to_output(keys):
 
     [A,W,D] boolean values.
     '''
-    output = [0, 0, 0]
+    output = [0, 0, 0, 0]
 
     if 'A' in keys:
         output[0] = 1
     elif 'D' in keys:
         output[2] = 1
-    else:
+    elif 'W' in keys:
         output[1] = 1
+    else:
+        output[3] = 1
     return output
 
 

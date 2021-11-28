@@ -11,7 +11,7 @@ K.clear_session()
 WIDTH = 160
 HEIGHT = 120
 LR = 1e-3
-EPOCHS = 2
+EPOCHS = 10
 MODEL_NAME = 'model/pygta5-car-{}-{}-{}-epochs.model'.format(LR, 'alexnetv2',EPOCHS)
 
 model = alexnet(WIDTH, HEIGHT, LR)

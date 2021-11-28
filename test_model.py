@@ -6,17 +6,16 @@ import time
 from direct_keys import PressKey, ReleaseKey, W, A, S, D
 from alexnet import alexnet
 from getkeys import key_check
-print(1)
+
 WIDTH = 160
 HEIGHT = 120
 LR = 1e-3
-EPOCHS = 2
-MODEL_NAME = 'pygta5-car-{}-{}-{}-epochs.model'.format(LR, 'alexnetv2', EPOCHS)
-MODEL_PATH = 'model/'
+EPOCHS = 10
+MODEL_NAME = 'model/pygta5-car-{}-{}-{}-epochs.model'.format(LR, 'alexnetv2',EPOCHS)
 
 t_time = 0.09
 
-print(2)
+
 def straight():
     PressKey(W)
     ReleaseKey(A)
@@ -38,10 +37,16 @@ def right():
     time.sleep(t_time)
     ReleaseKey(D)
 
-print(3)
+def brake():
+    PressKey(S)
+    ReleaseKey(W)
+    time.sleep(t_time)
+    ReleaseKey(S)
+
+
 model = alexnet(WIDTH, HEIGHT, LR)
-model.load(os.path.join(MODEL_PATH, MODEL_NAME))
-print(4)
+model.load(MODEL_NAME)
+
 
 def main():
     last_time = time.time()
@@ -72,7 +77,7 @@ def main():
             elif prediction[2] > turn_thresh:
                 right()
             else:
-                straight()
+                brake()
 
         keys = key_check()
 
@@ -86,6 +91,7 @@ def main():
                 ReleaseKey(A)
                 ReleaseKey(W)
                 ReleaseKey(D)
+                ReleaseKey(S)
                 time.sleep(1)
 
 
